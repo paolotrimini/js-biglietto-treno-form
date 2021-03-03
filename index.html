@@ -46,23 +46,24 @@
     var agePassengerNumber = parseInt(agePassenger);
     var priceOneKm = 0.21;
 
-    var priceTicketTot = 0.21 * kmPassengerNumber;
-    var underEighteen = priceTicketTot * 0.2;
-    var overSixtyfive = priceTicketTot * 0.4;
+    var priceTicketTot = (0.21 * kmPassengerNumber).toFixed(2);
+    var underEighteen = (priceTicketTot * 0.2).toFixed(2);
+    var overSixtyfive = (priceTicketTot * 0.4).toFixed(2);
 
 
 
     if ( agePassengerNumber < 18) {
 
-       console.log( underEighteen + ' scontato del 20%');
+        console.log( underEighteen + ' scontato del 20%');
 
-   } else if ((agePassengerNumber >= 18) && (agePassengerNumber <= 65)) {
+    } else if ((agePassengerNumber >= 18) && (agePassengerNumber <= 65)) {
 
         console.log(priceTicketTot + ' mi spiace, niente sconto!');
 
     } else {
         console.log( overSixtyfive + ' scontato del 40%');
     }
+
 
 
 
