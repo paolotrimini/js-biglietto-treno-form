@@ -32,13 +32,41 @@
 
 <div class="container">
     <div class="row">
-        <h1 id="mainTitle">Hello World</h1>
+        <h1 id="mainTitle">Biglietto del treno</h1>
     </div>
 </div>
 
 <!--codice javascript-->
 
 <script type="text/javascript">
+
+    var kmPassenger = prompt('km da percorrere: ');
+    var kmPassengerNumber = parseInt(kmPassenger);
+    var agePassenger = prompt('età passeggero: ');
+    var agePassengerNumber = parseInt(agePassenger);
+    var priceOneKm = 0.21;
+
+    var priceTicketTot = 0.21 * kmPassengerNumber;
+    var underEighteen = priceTicketTot * 0.2;
+    var overSixtyfive = priceTicketTot * 0.4;
+
+
+
+    if ( agePassengerNumber < 18) {
+
+       console.log( underEighteen + ' scontato del 20%');
+
+   } else if ((agePassengerNumber >= 18) && (agePassengerNumber <= 65)) {
+
+        console.log(priceTicketTot + ' mi spiace, niente sconto!');
+
+    } else {
+        console.log( overSixtyfive + ' scontato del 40%');
+    }
+
+
+
+    // console.log(kmPassenger, kmPassengerNumber, agePassenger, agePassengerNumber, priceOneKm);
 
 
 
